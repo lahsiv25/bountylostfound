@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Bountylostfound"  parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">@color/salmonpinkSecondarydark</item>
+    <item name="colorPrimaryVariant">@color/salmonpinkprimary</item>
+    <item name="colorOnPrimary">@color/white</item>
+    <!-- Secondary brand color. -->
+    <item name="colorSecondary">@color/salmonpinkSecondarydark</item>
+    <item name="colorSecondaryVariant">@color/md_grey_100</item>
+    <item name="colorOnSecondary">@color/md_grey_900</item>
+    <!-- Status bar color. -->
+    <item name="android:windowBackground">@drawable/lostandfoundfinall</item>
+
+    <!-- Customize your theme here. -->
+</style>
+</resources>

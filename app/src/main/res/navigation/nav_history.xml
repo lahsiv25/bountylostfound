@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_history"
+    app:startDestination="@id/historyFragment">
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.vishal.bountylostfound.fragments.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_itemFoundFragment2"
+            app:destination="@id/itemFoundFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.vishal.bountylostfound.addDataFragment.EditFragment"
+        android:label="Edit entry"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.vishal.bountylostfound.dao.found" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/itemFoundFragment2"
+        android:name="com.vishal.bountylostfound.fragments.ItemFoundFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_item_found" >
+        <argument
+            android:name="data"
+            app:argType="com.vishal.bountylostfound.dao.found" />
+    </fragment>
+
+
+</navigation>

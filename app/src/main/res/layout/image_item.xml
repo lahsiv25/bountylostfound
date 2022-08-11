@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView android:id="@+id/imageitem"
+    tools:src="@drawable/distanceicon"
+    android:layout_width="wrap_content"
+    android:paddingEnd="10dp"
+    android:layout_height="match_parent"
+    android:scaleType="fitCenter"
+    android:adjustViewBounds="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" />

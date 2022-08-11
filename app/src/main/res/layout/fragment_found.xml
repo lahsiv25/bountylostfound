@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addDataFragment.FoundFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/wholefound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/SubmitButton"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/FoundOrLostDropDown"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:hint="Found/Lost"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/SupportText"
+                            app:layout_constraintWidth_percent="0.85">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/FoundOrLostDropDown1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <TextView
+                            android:id="@+id/EntryText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Add a new entry"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="24sp"
+                            app:layout_constraintStart_toStartOf="@+id/FoundOrLostDropDown"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/SupportText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/robotomedium"
+                            android:text="Enter the details of the product you've lost/found and click submit"
+                            android:textSize="16sp"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@+id/FoundOrLostDropDown"
+                            app:layout_constraintTop_toBottomOf="@id/EntryText"
+                            app:layout_constraintWidth_percent="0.8" />
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/NameEditText"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Identity name"
+                            app:layout_constraintEnd_toEndOf="@id/FoundOrLostDropDown"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@id/FoundOrLostDropDown"
+                            app:layout_constraintTop_toBottomOf="@id/FoundOrLostDropDown"
+                            app:startIconDrawable="@drawable/itemname">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/NameEditText1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/DescriptionEditText"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Description"
+                            app:layout_constraintEnd_toEndOf="@id/FoundOrLostDropDown"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@id/FoundOrLostDropDown"
+                            app:layout_constraintTop_toBottomOf="@id/NameEditText"
+                            app:startIconDrawable="@drawable/description">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/DescriptionEditText1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/PhoneEdittext"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Contact Number"
+                            app:layout_constraintEnd_toEndOf="@id/FoundOrLostDropDown"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/Countrypicker"
+                            app:layout_constraintTop_toBottomOf="@id/DescriptionEditText">
+                            <!--app:startIconDrawable="@drawable/contactphone"-->
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/PhoneEdittext1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="13"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/Countrypicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            app:ccp_contentColor="?attr/colorOnSecondary"
+                            app:ccpDialog_textColor="?attr/colorOnSecondary"
+                            app:layout_constraintBottom_toBottomOf="@+id/PhoneEdittext"
+                            app:layout_constraintStart_toStartOf="@+id/DescriptionEditText"
+                            app:layout_constraintTop_toTopOf="@+id/PhoneEdittext"
+                            tools:ignore="MissingClass" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/LocationEditText"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Location where you found/lost"
+                            app:layout_constraintEnd_toEndOf="@id/FoundOrLostDropDown"
+                            app:layout_constraintStart_toStartOf="@id/FoundOrLostDropDown"
+                            app:layout_constraintTop_toBottomOf="@id/PhoneEdittext"
+                            app:startIconDrawable="@drawable/addlocation">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/LocationEditText1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/AddImageButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Add Photo"
+                            app:icon="@drawable/addphoto"
+                            app:layout_constraintStart_toStartOf="@id/FoundOrLostDropDown"
+                            app:layout_constraintTop_toBottomOf="@id/LocationEditText"
+                            app:layout_constraintWidth_percent="0.4" />
+
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/PhotoView"
+                            android:layout_width="0dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintStart_toStartOf="@id/AddImageButton"
+                            app:layout_constraintTop_toBottomOf="@+id/AddImageButton"
+                            app:layout_constraintWidth_percent="0.8"
+                            tools:listitem="@layout/image_item" />
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </ScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/SubmitButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                android:text="Submit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.85" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <LinearLayout
+        android:id="@+id/ll_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:visibility="invisible"/>
+
+    <include
+        android:id="@+id/included_bottom_sheet"
+        layout="@layout/bottom_sheet"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

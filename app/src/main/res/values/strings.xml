@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Bounty</string>
+    <string name="sign_in">Sign In</string>
+    <string name="a">a</string>
+    <string name="b">b</string>
+    <string name="c">c</string>
+    <string name="d">d</string>
+    <string name="add_bounty">Enter a Bounty amount you would like to fix for your lost item and when you delete your entry you will receive only 80% of the bounty fixed as a refund</string>
+    <string name="sign_out" />
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_web_client_ide">1018945383659-6q4uv1m37p20j0npm0al6n5kj8v19s0l.apps.googleusercontent.com</string>
+</resources>
