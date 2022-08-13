@@ -106,7 +106,7 @@ class EditFragment : Fragment(),PaymentResultListener {
         binding.LocationEditText1.setText(data.location)
         binding.Countrypicker.setCountryForNameCode(data.countryCode)
         binding.FoundOrLostDropDown1.setOnClickListener {
-           // Toast.makeText(requireContext(), "Lost or found can't be changed", Toast.LENGTH_SHORT).show()
+            // Toast.makeText(requireContext(), "Lost or found can't be changed", Toast.LENGTH_SHORT).show()
         }
 
         binding.AddImageButton.setOnClickListener {
@@ -231,9 +231,9 @@ class EditFragment : Fragment(),PaymentResultListener {
                                                 database.getReference("History")
                                                     .child(mAuth.currentUser!!.uid).child(OrderId).setValue(
                                                         FinalData(Date,Distance,OrderId!!
-                                                        ,LostOrFound!!,Name,Description,Phone,Location,Latitude,Longitude
-                                                        ,LocationCode,imageUri, BountyOrNot,BountyAmount,Favourite
-                                                        ,UserName,CountryCode)
+                                                            ,LostOrFound!!,Name,Description,Phone,Location,Latitude,Longitude
+                                                            ,LocationCode,imageUri, BountyOrNot,BountyAmount,Favourite
+                                                            ,UserName,CountryCode)
                                                     ).addOnSuccessListener {
                                                         //Toast.makeText(requireContext(), "Success", Toast.LENGTH_SHORT).show()
                                                         if(progressDialog.isShowing){
@@ -287,9 +287,9 @@ class EditFragment : Fragment(),PaymentResultListener {
                         database.getReference("History")
                             .child(mAuth.currentUser!!.uid).child(OrderId).setValue(
                                 FinalData(Date,Distance,OrderId!!
-                                ,LostOrFound!!,Name,Description,Phone,Location,Latitude,Longitude
-                                ,LocationCode,imageUri,BountyOrNot,BountyAmount,Favourite
-                                ,UserName,CountryCode)
+                                    ,LostOrFound!!,Name,Description,Phone,Location,Latitude,Longitude
+                                    ,LocationCode,imageUri,BountyOrNot,BountyAmount,Favourite
+                                    ,UserName,CountryCode)
                             ).addOnSuccessListener {
                                 //Toast.makeText(requireContext(), "Success", Toast.LENGTH_SHORT).show()
                                 if(progressDialog.isShowing){
@@ -313,7 +313,7 @@ class EditFragment : Fragment(),PaymentResultListener {
                                                 binding.llMask.isVisible = true
                                                 (bottomSheetBehavior as BottomSheetBehavior<*>).isHideable = false
                                                 (bottomSheetBehavior as BottomSheetBehavior<*>).state = BottomSheetBehavior.STATE_EXPANDED
-                                                })
+                                            })
                                         .create().show()
                                 }else if (LostOrFound == "foundEntry"){
                                     val navController = Navigation.findNavController(requireView())
